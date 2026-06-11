@@ -90,21 +90,21 @@ const Contact = () => {
               <div className={styles.contactIcon}><HiMail /></div>
               <div>
                 <strong>Email</strong>
-                <span>info@arkdigitalmarketing.com</span>
+                <span>info@arkdigitalsolutions.com</span>
               </div>
             </div>
             <div className={styles.contactItem}>
               <div className={styles.contactIcon}><HiPhone /></div>
               <div>
                 <strong>Phone</strong>
-                <span>+91 XXXXXXXXXX</span>
+                <span>+1 (224) 451-6560 / +1 (847) 704-2492</span>
               </div>
             </div>
             <div className={styles.contactItem}>
               <div className={styles.contactIcon}><HiLocationMarker /></div>
               <div>
                 <strong>Location</strong>
-                <span>India</span>
+                <span>Chicago, IL, USA</span>
               </div>
             </div>
           </div>

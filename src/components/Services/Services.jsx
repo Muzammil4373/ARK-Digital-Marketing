@@ -4,7 +4,7 @@ import { useInView } from '../../hooks/useInView';
 import {
   HiDesktopComputer, HiDeviceMobile, HiCollection, HiDocumentText,
   HiUsers, HiShoppingCart, HiCode, HiCloud, HiSupport,
-  HiDatabase, HiCog, HiLightningBolt,
+  HiDatabase, HiCog, HiLightningBolt, HiSpeakerphone,
 } from 'react-icons/hi';
 import styles from './Services.module.css';
 

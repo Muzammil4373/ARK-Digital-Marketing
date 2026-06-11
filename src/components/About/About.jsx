@@ -61,9 +61,9 @@ const About = () => {
           transition={{ duration: 0.7, delay: 0.15 }}
         >
           <p className="section-eyebrow">Who We Are</p>
-          <h2 className="section-title">About ARK Digital Marketing</h2>
+          <h2 className="section-title">About ARK Digital Solutions</h2>
           <p className="section-body">
-            ARK Digital Marketing is a technology solutions company specializing in custom software
+            ARK Digital Solutions is a technology solutions company specializing in custom software
             development, website development, mobile applications, enterprise solutions, cloud
             services, and business automation.
           </p>

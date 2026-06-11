@@ -23,7 +23,7 @@ const Logo = () => (
     </div>
     <div className={styles.logoText}>
       <span className={styles.logoName}>ARK Digital</span>
-      <span className={styles.logoSub}>Marketing</span>
+      <span className={styles.logoSub}>Solutions</span>
     </div>
   </a>
 );
