@@ -40,10 +40,10 @@ const Footer = () => (
         </button>
         <p>Building Digital Solutions That Drive Business Growth. We partner with businesses to create scalable, secure, and high-performance technology that transforms operations.</p>
         <div className={styles.socials}>
-          <a href="#" className={styles.social} aria-label="LinkedIn"><FaLinkedinIn /></a>
-          <a href="#" className={styles.social} aria-label="Facebook"><FaFacebookF /></a>
-          <a href="#" className={styles.social} aria-label="Instagram"><FaInstagram /></a>
-          <a href="#" className={styles.social} aria-label="WhatsApp"><FaWhatsapp /></a>
+         <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className={styles.social} aria-label="LinkedIn"><FaLinkedinIn /></a>
+<a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className={styles.social} aria-label="Facebook"><FaFacebookF /></a>
+<a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className={styles.social} aria-label="Instagram"><FaInstagram /></a>
+<a href="https://wa.me/91XXXXXXXXXX" target="_blank" rel="noopener noreferrer" className={styles.social} aria-label="WhatsApp"><FaWhatsapp /></a>
         </div>
       </div>
 
