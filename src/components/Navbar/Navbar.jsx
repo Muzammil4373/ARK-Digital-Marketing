@@ -5,28 +5,12 @@ import styles from './Navbar.module.css';
 
 const navLinks = [
   { label: 'Home', to: 'home' },
-  { label: 'About', to: 'about' },
   { label: 'Services', to: 'services' },
-  { label: 'Industries', to: 'industries' },
-  { label: 'Process', to: 'process' },
+  { label: 'Solutions', to: 'solutions' },
+  { label: 'Case Studies', to: 'about' },
+  { label: 'About Us', to: 'about' },
+  { label: 'Contact', to: 'contact' },
 ];
-
-const Logo = () => (
-  <a href="#home" className={styles.logo}>
-    <div className={styles.logoMark}>
-      <svg viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
-        <path d="M4 22L13 4L22 22" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
-        <path d="M7.5 15.5H18.5" stroke="white" strokeWidth="2.5" strokeLinecap="round"/>
-        <path d="M14 13L19 22" stroke="#93C5FD" strokeWidth="2.5" strokeLinecap="round"/>
-        <circle cx="21" cy="6" r="2.5" fill="#3B82F6"/>
-      </svg>
-    </div>
-    <div className={styles.logoText}>
-      <span className={styles.logoName}>ARK Digital</span>
-      <span className={styles.logoSub}>Solutions</span>
-    </div>
-  </a>
-);
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -51,47 +35,69 @@ const Navbar = () => {
         animate={{ y: 0 }}
         transition={{ duration: 0.5, ease: 'easeOut' }}
       >
-        <Logo />
+        {/* LOGO */}
+        <button className={styles.logo} onClick={() => scrollTo('home')}>
+          <div className={styles.logoMark}>
+            {/* ARK logo: bold A with upward arrow through K */}
+            <svg viewBox="0 0 36 36" fill="none" width="32" height="32">
+              <defs>
+                <linearGradient id="navLg" x1="0" y1="0" x2="36" y2="36" gradientUnits="userSpaceOnUse">
+                  <stop stopColor="#60A5FA"/>
+                  <stop offset="1" stopColor="#1D4ED8"/>
+                </linearGradient>
+                <linearGradient id="navLg2" x1="22" y1="4" x2="34" y2="4" gradientUnits="userSpaceOnUse">
+                  <stop stopColor="#7DD3FC"/>
+                  <stop offset="1" stopColor="#38BDF8"/>
+                </linearGradient>
+              </defs>
+              {/* A shape */}
+              <path d="M4 30L13 6L22 30" stroke="url(#navLg)" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
+              <path d="M7 21H19" stroke="url(#navLg)" strokeWidth="3" strokeLinecap="round"/>
+              {/* K right leg + arrow */}
+              <path d="M24 18L32 8" stroke="url(#navLg2)" strokeWidth="2.8" strokeLinecap="round"/>
+              <path d="M24 18L32 28" stroke="url(#navLg)" strokeWidth="2.8" strokeLinecap="round"/>
+              {/* Arrow head on upper K leg */}
+              <path d="M29 6L32 8L30 11" stroke="url(#navLg2)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+          </div>
+          <div className={styles.logoText}>
+            <span className={styles.logoName}>ARK Digital</span>
+            <span className={styles.logoSub}>GROWTH</span>
+          </div>
+        </button>
 
+        {/* NAV LINKS */}
         <ul className={styles.navLinks}>
           {navLinks.map((link) => (
-            <li key={link.to}>
-              <button onClick={() => scrollTo(link.to)} className={styles.navLink}>
-                {link.label}
-              </button>
+            <li key={link.label}>
+              <button onClick={() => scrollTo(link.to)} className={styles.navLink}>{link.label}</button>
             </li>
           ))}
         </ul>
 
-        <button onClick={() => scrollTo('contact')} className={`btn-primary ${styles.navCta}`}>
-          Get in Touch
-        </button>
-
-        <button
-          className={styles.hamburger}
-          onClick={() => setMenuOpen(!menuOpen)}
-          aria-label="Toggle menu"
-        >
-          {menuOpen ? <HiX size={24} /> : <HiMenu size={24} />}
-        </button>
+        {/* CTA + HAMBURGER */}
+        <div className={styles.navRight}>
+          <button onClick={() => scrollTo('contact')} className={styles.navCta}>
+            Book Strategy Call
+          </button>
+          <button className={styles.hamburger} onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle menu">
+            {menuOpen ? <HiX size={22} /> : <HiMenu size={22} />}
+          </button>
+        </div>
       </motion.nav>
 
       <AnimatePresence>
         {menuOpen && (
-          <motion.div
-            className={styles.mobileMenu}
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.25 }}
-          >
+          <motion.div className={styles.mobileMenu}
+            initial={{ opacity: 0, y: -16 }} animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -16 }} transition={{ duration: 0.22 }}>
             {navLinks.map((link) => (
-              <button key={link.to} onClick={() => scrollTo(link.to)} className={styles.mobileLink}>
+              <button key={link.label} onClick={() => scrollTo(link.to)} className={styles.mobileLink}>
                 {link.label}
               </button>
             ))}
-            <button onClick={() => scrollTo('contact')} className={`btn-primary ${styles.mobileCta}`}>
-              Get Free Consultation
+            <button onClick={() => scrollTo('contact')} className={styles.mobileCta}>
+              Book Strategy Call
             </button>
           </motion.div>
         )}

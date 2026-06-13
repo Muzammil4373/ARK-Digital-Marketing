@@ -1,36 +1,33 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from '../../hooks/useInView';
-import { HiCalendar, HiArrowRight } from 'react-icons/hi';
+import { HiArrowRight } from 'react-icons/hi';
 import styles from './CTA.module.css';
 
 const CTA = () => {
   const [ref, inView] = useInView(0.2);
-
   const scrollTo = (id) => document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
 
   return (
     <section id="cta" className={styles.cta} ref={ref}>
-      <div className={styles.glow} />
-      <motion.div
-        className={styles.content}
-        initial={{ opacity: 0, y: 32 }}
-        animate={inView ? { opacity: 1, y: 0 } : {}}
-        transition={{ duration: 0.7 }}
-      >
-        <p className="section-eyebrow center">Start Today</p>
-        <h2 className="section-title center">Ready to Start Your Next Project?</h2>
-        <p className="section-body center">
-          Let's build innovative digital solutions that help your business grow, automate
-          operations, and improve customer experience.
-        </p>
-        <div className={styles.buttons}>
-          <button onClick={() => scrollTo('contact')} className="btn-primary">
-            <HiCalendar /> Schedule a Consultation
+      <motion.div className={styles.bar}
+        initial={{ opacity: 0, y: 28 }} animate={inView ? { opacity: 1, y: 0 } : {}}
+        transition={{ duration: 0.6 }}>
+        <div className={styles.left}>
+          <div className={styles.icon}>📞</div>
+          <div>
+            <h2 className={styles.title}>Ready to Scale Your Business?</h2>
+            <p className={styles.desc}>
+              Let's build a strategy that brings you more leads, automates your processes,
+              and helps you scale with confidence.
+            </p>
+          </div>
+        </div>
+        <div className={styles.right}>
+          <button onClick={() => scrollTo('contact')} className={styles.btn}>
+            Book Your Strategy Call <HiArrowRight />
           </button>
-          <button onClick={() => scrollTo('contact')} className="btn-secondary">
-            Contact Us Today <HiArrowRight />
-          </button>
+          <p className={styles.note}>✓ Free consultation &nbsp;·&nbsp; No commitments</p>
         </div>
       </motion.div>
     </section>

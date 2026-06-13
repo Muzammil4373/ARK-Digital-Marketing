@@ -90,21 +90,21 @@ const Contact = () => {
               <div className={styles.contactIcon}><HiMail /></div>
               <div>
                 <strong>Email</strong>
-                <span>info@arkdigitalsolutions.com</span>
+                <span>info@arkdigitalgrowth.com</span>
               </div>
             </div>
             <div className={styles.contactItem}>
               <div className={styles.contactIcon}><HiPhone /></div>
               <div>
                 <strong>Phone</strong>
-                <span>+1 (224) 451-6560 / +1 (847) 704-2492</span>
+                <span>+1 (224) 451-6560</span>
               </div>
             </div>
             <div className={styles.contactItem}>
               <div className={styles.contactIcon}><HiLocationMarker /></div>
               <div>
                 <strong>Location</strong>
-                <span>Chicago, IL, USA</span>
+                <span>Chicago, IL 60601, USA</span>
               </div>
             </div>
           </div>
@@ -123,7 +123,7 @@ const Contact = () => {
         >
           {!submitted ? (
             <form className={styles.form} onSubmit={handleSubmit} noValidate>
-              <h3 className={styles.formTitle}>Request a Free Consultation</h3>
+              <h3 className={styles.formTitle}>Book Your Strategy Call</h3>
 
               <div className={styles.row}>
                 <div className={`${styles.group} ${errors.fullName ? styles.error : ''}`}>

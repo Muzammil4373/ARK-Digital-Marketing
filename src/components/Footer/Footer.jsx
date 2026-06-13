@@ -35,15 +35,19 @@ const Footer = () => (
           </div>
           <div className={styles.logoText}>
             <span>ARK Digital</span>
-            <span>Solutions</span>
+            <span>Marketing</span>
           </div>
         </button>
         <p>Building Digital Solutions That Drive Business Growth. We partner with businesses to create scalable, secure, and high-performance technology that transforms operations.</p>
         <div className={styles.socials}>
-         <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className={styles.social} aria-label="LinkedIn"><FaLinkedinIn /></a>
-<a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className={styles.social} aria-label="Facebook"><FaFacebookF /></a>
-<a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className={styles.social} aria-label="Instagram"><FaInstagram /></a>
-<a href="https://wa.me/91XXXXXXXXXX" target="_blank" rel="noopener noreferrer" className={styles.social} aria-label="WhatsApp"><FaWhatsapp /></a>
+          {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className={styles.social} aria-label="LinkedIn"><FaLinkedinIn /></a>
+          {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className={styles.social} aria-label="Facebook"><FaFacebookF /></a>
+          {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className={styles.social} aria-label="Instagram"><FaInstagram /></a>
+          {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+          <a href="https://wa.me/91XXXXXXXXXX" target="_blank" rel="noopener noreferrer" className={styles.social} aria-label="WhatsApp"><FaWhatsapp /></a>
         </div>
       </div>
 
@@ -73,7 +77,7 @@ const Footer = () => (
     </div>
 
     <div className={styles.bottom}>
-      <span>© 2026 ARK Digital Solutions. All Rights Reserved.</span>
+      <span>© 2026 ARK Digital Growth. All Rights Reserved.</span>
       <span>Building Digital Solutions That Drive Business Growth</span>
     </div>
   </footer>

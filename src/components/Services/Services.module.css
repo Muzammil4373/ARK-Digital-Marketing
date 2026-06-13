@@ -1,101 +1,147 @@
-.services {
+.section {
   background: var(--navy);
   padding: 100px 5%;
 }
 
 .inner { max-width: 1200px; margin: 0 auto; }
 
-.header { margin-bottom: 56px; }
+.header { text-align: center; margin-bottom: 52px; }
 
+.eyebrow {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  color: #64748B;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: clamp(1.7rem, 3vw, 2.4rem);
+  font-weight: 700;
+  color: #F1F5F9;
+  letter-spacing: -0.02em;
+}
+
+/* 4-column grid */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 24px;
-}
-
-.card {
-  background: var(--card-bg);
-  border: 1px solid var(--border);
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: rgba(59,130,246,0.1);
+  border: 1px solid rgba(59,130,246,0.1);
   border-radius: 16px;
-  padding: 32px;
-  transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
-  position: relative;
   overflow: hidden;
-  cursor: default;
 }
 
-.card::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; right: 0;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, var(--blue), transparent);
-  transform: scaleX(0);
-  transition: transform 0.4s;
-}
-
-.card:hover {
-  border-color: rgba(37,99,235,0.4);
-  transform: translateY(-4px);
-  box-shadow: 0 12px 40px rgba(37,99,235,0.15);
-}
-
-.card:hover::before { transform: scaleX(1); }
-
-.icon {
-  width: 52px; height: 52px;
-  background: rgba(37,99,235,0.1);
-  border: 1px solid rgba(37,99,235,0.2);
-  border-radius: 12px;
+.col {
+  background: rgba(10, 15, 30, 0.9);
+  padding: 28px 22px;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 20px;
-  font-size: 1.5rem;
-  color: var(--blue-light);
+  flex-direction: column;
+  gap: 20px;
   transition: background 0.3s;
 }
 
-.card:hover .icon { background: rgba(37,99,235,0.2); }
+.col:hover { background: rgba(15, 23, 46, 0.95); }
 
-.card h3 {
+/* Column header */
+.colHead {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.colEmoji { font-size: 1.6rem; flex-shrink: 0; margin-top: 2px; }
+
+.colTitle {
   font-family: var(--font-display);
-  font-size: 1.05rem;
-  font-weight: 600;
-  color: var(--white);
-  margin-bottom: 10px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #F1F5F9;
+  margin-bottom: 4px;
+  line-height: 1.2;
 }
 
-.card p {
-  font-size: 0.85rem;
-  color: var(--text-secondary);
-  line-height: 1.6;
+.colDesc {
+  font-size: 0.76rem;
+  color: #64748B;
+  line-height: 1.5;
 }
 
-.list {
-  list-style: none;
-  margin-top: 14px;
+/* Service rows */
+.rows {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 12px;
+  flex: 1;
 }
 
-.list li {
-  font-size: 0.82rem;
-  color: var(--grey-dark);
+.row {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 9px;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.04);
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.row:hover {
+  background: rgba(255,255,255,0.05);
+  border-color: rgba(255,255,255,0.08);
+}
+
+.rowIcon {
+  width: 30px; height: 30px;
+  border-radius: 7px;
   display: flex;
   align-items: center;
-  gap: 8px;
-}
-
-.list li::before {
-  content: '';
-  width: 5px; height: 5px;
-  background: var(--blue);
-  border-radius: 50%;
+  justify-content: center;
+  font-size: 0.85rem;
   flex-shrink: 0;
+  margin-top: 1px;
 }
 
-@media (max-width: 480px) {
+.rowName {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #E2E8F0;
+  margin-bottom: 2px;
+}
+
+.rowDesc {
+  font-size: 0.73rem;
+  color: #475569;
+  line-height: 1.4;
+}
+
+/* View All */
+.viewAll {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  background: none;
+  border: none;
+  font-size: 0.78rem;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: var(--font-body);
+  padding: 0;
+  transition: gap 0.2s, opacity 0.2s;
+  letter-spacing: 0.02em;
+}
+
+.viewAll:hover { gap: 6px; opacity: 0.8; }
+
+@media (max-width: 1024px) {
+  .grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 560px) {
   .grid { grid-template-columns: 1fr; }
 }

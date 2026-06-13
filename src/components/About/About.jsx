@@ -5,16 +5,16 @@ import { HiLightningBolt, HiShieldCheck, HiClock } from 'react-icons/hi';
 import styles from './About.module.css';
 
 const statsData = [
-  { num: '50+', label: 'Projects Delivered' },
-  { num: '12+', label: 'Industries Served' },
-  { num: '100%', label: 'Satisfaction Rate' },
-  { num: '24/7', label: 'Technical Support' },
+  { num: '50K+', label: 'Leads Generated' },
+  { num: '$5M+', label: 'Revenue Influenced' },
+  { num: '98%', label: 'Retention Rate' },
+  { num: '24/7', label: 'AI Automation' },
 ];
 
 const features = [
-  { icon: <HiLightningBolt />, title: 'End-to-End Project Lifecycle', desc: 'From planning and design to deployment and ongoing support' },
-  { icon: <HiShieldCheck />, title: 'Secure & Scalable Architecture', desc: 'Built for growth with enterprise-grade security standards' },
-  { icon: <HiClock />, title: 'On-Time Delivery', desc: 'Disciplined project management with transparent timelines' },
+  { icon: <HiLightningBolt />, title: 'AI-Powered Systems', desc: 'Every solution is built with automation and AI at its core' },
+  { icon: <HiShieldCheck />, title: 'Proven Results', desc: 'We measure success by your revenue, not vanity metrics' },
+  { icon: <HiClock />, title: 'Chicago-Based Team', desc: 'Local expertise with a global digital reach' },
 ];
 
 const About = () => {
@@ -23,13 +23,9 @@ const About = () => {
   return (
     <section id="about" className={styles.about} ref={ref}>
       <div className={styles.inner}>
-        {/* Visual box */}
-        <motion.div
-          className={styles.visual}
-          initial={{ opacity: 0, x: -40 }}
-          animate={inView ? { opacity: 1, x: 0 } : {}}
-          transition={{ duration: 0.7 }}
-        >
+        <motion.div className={styles.visual}
+          initial={{ opacity: 0, x: -40 }} animate={inView ? { opacity: 1, x: 0 } : {}}
+          transition={{ duration: 0.7 }}>
           <div className={styles.box}>
             <div className={styles.statsGrid}>
               {statsData.map((s, i) => (
@@ -53,36 +49,26 @@ const About = () => {
           </div>
         </motion.div>
 
-        {/* Text */}
-        <motion.div
-          className={styles.text}
-          initial={{ opacity: 0, x: 40 }}
-          animate={inView ? { opacity: 1, x: 0 } : {}}
-          transition={{ duration: 0.7, delay: 0.15 }}
-        >
+        <motion.div className={styles.text}
+          initial={{ opacity: 0, x: 40 }} animate={inView ? { opacity: 1, x: 0 } : {}}
+          transition={{ duration: 0.7, delay: 0.15 }}>
           <p className="section-eyebrow">Who We Are</p>
-          <h2 className="section-title">About ARK Digital Solutions</h2>
+          <h2 className="section-title">About ARK Digital Growth</h2>
           <p className="section-body">
-            ARK Digital Solutions is a technology solutions company specializing in custom software
-            development, website development, mobile applications, enterprise solutions, cloud
-            services, and business automation.
+            ARK Digital Growth is a Chicago-based digital growth agency helping businesses generate more leads, automate their sales process, and scale using Facebook Ads, Google Ads, AI automation, custom websites, and SaaS solutions.
           </p>
           <p className="section-body" style={{ marginTop: '16px' }}>
-            We partner with startups, small businesses, and enterprises to build scalable, secure,
-            and high-performance digital products that help organizations streamline operations and
-            achieve business growth.
+            We partner with local businesses, scaling teams, and enterprises to build AI-powered growth systems that turn traffic into revenue — on autopilot.
           </p>
           <p className="section-body" style={{ marginTop: '16px' }}>
-            From planning and design to deployment and ongoing support, we manage the complete
-            project lifecycle and deliver reliable technology solutions tailored to each client's
-            needs.
+            From strategy to execution, we manage your entire digital growth engine and deliver measurable results that matter to your bottom line.
           </p>
           <div className={styles.ctaRow}>
-            <button onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })} className="btn-primary">
-              Explore Services
+            <button onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })} className="btn-primary">
+              Book a Strategy Call
             </button>
-            <button onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })} className="btn-secondary">
-              Talk to Us
+            <button onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })} className="btn-secondary">
+              Our Services
             </button>
           </div>
         </motion.div>
