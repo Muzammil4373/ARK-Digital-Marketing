@@ -35,7 +35,7 @@ const Footer = () => (
           </div>
           <div className={styles.logoText}>
             <span>ARK Digital</span>
-            <span>Marketing</span>
+            <span>GROWTH</span>
           </div>
         </button>
         <p>Building Digital Solutions That Drive Business Growth. We partner with businesses to create scalable, secure, and high-performance technology that transforms operations.</p>
@@ -78,7 +78,7 @@ const Footer = () => (
 
     <div className={styles.bottom}>
       <span>© 2026 ARK Digital Growth. All Rights Reserved.</span>
-      <span>Building Digital Solutions That Drive Business Growth</span>
+      <span>Building Digital GROWTH That Drive Business Growth</span>
     </div>
   </footer>
 );

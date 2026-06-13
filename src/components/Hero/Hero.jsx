@@ -86,8 +86,8 @@ const Hero = () => {
           <motion.h1 className={styles.title}
             initial={{ opacity: 0, y: 32 }} animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.65 }}>
-            AI-Powered<br />
-            <span className={styles.accent}>Growth Systems</span><br />
+            AI-Powered
+            <span className={styles.accent}>Growth Systems</span>
             <span className={styles.sub}>For Modern Businesses</span>
           </motion.h1>
 
